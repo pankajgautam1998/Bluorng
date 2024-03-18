@@ -3,8 +3,8 @@ import bluorng from "../assests/Screenshot 2024-03-15 121027.png";
 
 const Header = () => {
   return (
-    <div>
-      <div className="bg-black text-white text-center *:text-xs fixed w-full ">
+    <div className="w-full bg-white z-50 sticky top-0">
+      <div className="bg-black text-white text-center *:text-xs *:animate-bounce">
         <p className="">BLUORNG</p>
         <p>EXTENSION OF YOUR EXPRESSION</p>
       </div>
@@ -13,10 +13,48 @@ const Header = () => {
         <div className=" text-center items-center">
           <img src={bluorng} alt="" />
         </div>
-        <div className="flex gap-10 ">
-          <p>NEW IN</p>
-          <p>APPAREL</p>
-          <p>STORES</p>
+        <div className="flex gap-5 items-center">
+          <div className="hover:text-gray-300 cursor-pointer">NEW IN</div>
+          <div className="flex flex-col relative py-5 group">
+            <div className="cursor-pointer hover:text-gray-300">APPAREL</div>
+            <div className="absolute top-16 text-left z-50 p-4 *:p-2 !text-xs  !text-black border shadow bg-white hidden group-hover:block">
+              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300 ">
+                <p>T-SHIRTS</p>
+              </div>
+              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl  hover:text-gray-300">
+                <p>SHIRTS</p>
+              </div>
+              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                <p>HOODIES</p>
+              </div>
+              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                <p>SWEATSHIRTS</p>
+              </div>
+              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                <p>SWEATSHIRTS</p>
+              </div>
+              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                <p>JEANS</p>
+              </div>
+              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                <p>SHORTS</p>
+              </div>
+            </div>
+          </div>
+          <div className=" flex flex-col relative group cursor-pointer py-5">
+            <div className="cursor-pointer hover:text-gray-300">STORES</div>
+            <div className="absolute top-16 bg-white text-xs *:p-2 text-black shadow hidden  z-50 group-hover:block border">
+              <div className="cursor-pointer hover:bg-slate-50 hover:text-gray-300">
+                <p>DELHI</p>
+              </div>
+              <div className="cursor-pointer hover:bg-slate-50 hover:text-gray-300">
+                <p>MUMBAI</p>
+              </div>
+              <div className="cursor-pointer hover:bg-slate-50 hover:text-gray-300">
+                <p>HYDERABAD</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="flex gap-10 items-center">
           <p>SEARCH</p>

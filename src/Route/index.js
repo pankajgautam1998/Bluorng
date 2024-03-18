@@ -2,6 +2,7 @@ import Bluorng from "../Bluorng";
 import Footer from "../Footer";
 import Header from "../Header";
 import Layout from "../Layout";
+import NewIn from "../NewIn";
 
 export const routes = [
   {
@@ -11,17 +12,7 @@ export const routes = [
   },
   {
     id: 1,
-    path: "/layout",
-    element: <Layout />,
-  },
-  {
-    id: 1,
-    path: "/header",
-    element: <Header />,
-  },
-  {
-    id: 1,
-    path: "/footer",
-    element: <Footer />,
+    path: "newin",
+    element: <NewIn />,
   },
 ];

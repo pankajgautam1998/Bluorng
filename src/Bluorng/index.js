@@ -1,5 +1,5 @@
 import React from "react";
-import bluorng from "../assests/Screenshot 2024-03-15 121027.png";
+
 import firstimage from "../assests/1.webp";
 import secondimage from "../assests/2.webp";
 import thirdimage from "../assests/3.webp";
@@ -13,13 +13,12 @@ import b1 from "../assests/b1.webp";
 import b2 from "../assests/b2.webp";
 import b3 from "../assests/b3.webp";
 import b4 from "../assests/b4.webp";
-import footerimage from "../assests/Screenshot_2024-03-15_151803-removebg-preview.png";
 
 const Bluorng = () => {
   return (
     <>
-      <div className="cursor-pointer">
-        <div className="bg-black text-white text-center *:text-xs fixed w-full ">
+      <div className="cursor-pointer pt-20 ">
+        {/* <div className="bg-black text-white text-center *:text-xs fixed w-full ">
           <p className="">BLUORNG</p>
           <p>EXTENSION OF YOUR EXPRESSION</p>
         </div>
@@ -44,10 +43,10 @@ const Bluorng = () => {
               />
             </p>
           </div>
-        </div>
-        <div></div>
+        </div> */}
+
         <div>
-          <div className="text-center">SHOP ALL</div>
+          <div className="text-center ">SHOP ALL</div>
           <div className="flex justify-between px-[1%] p-3">
             <p>LATEST DROP</p>
             <p className="bg-slate-100 w-fit">DISCOVER MORE</p>
@@ -197,7 +196,7 @@ const Bluorng = () => {
             </video>
           </div>
         </div>
-        <div className="bg-black">
+        {/* <div className="bg-black">
           <div className="font-sans text-white flex justify-around text-xs font-bold">
             <p>SHIPPING WORLDWIDE</p>
             <p>SHIPPING WORLDWIDE</p>
@@ -238,7 +237,7 @@ const Bluorng = () => {
             <p>YOUTUBE</p>
             <p>LINKEDIN</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

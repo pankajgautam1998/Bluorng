@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { routes } from "./Route";
+import Layout from "./Layout";
 
 function App() {
   return (
@@ -8,7 +9,11 @@ function App() {
       <Routes>
         {routes.map((route, index) => {
           return (
-            <Route key={index} path={route.path} element={route.element} />
+            <Route
+              key={index}
+              path={route.path}
+              element={<Layout children={route.element} />}
+            />
           );
         })}
       </Routes>

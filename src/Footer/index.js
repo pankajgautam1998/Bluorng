@@ -4,8 +4,8 @@ import footerimage from "../assests/Screenshot_2024-03-15_151803-removebg-previe
 const Footer = () => {
   return (
     <>
-      <div className="bg-black">
-        <div className="font-sans text-white flex justify-around text-xs font-bold">
+      <div className="bg-black sticky bottom-0">
+        <div className="font-sans text-white flex justify-around text-xs font-bold *:animate-pulse">
           <p>SHIPPING WORLDWIDE</p>
           <p>SHIPPING WORLDWIDE</p>
           <p>SHIPPING WORLDWIDE</p>
