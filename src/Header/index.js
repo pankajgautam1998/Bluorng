@@ -1,5 +1,6 @@
 import React from "react";
 import bluorng from "../assests/Screenshot 2024-03-15 121027.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,16 +15,23 @@ const Header = () => {
           <img src={bluorng} alt="" />
         </div>
         <div className="flex gap-5 items-center">
-          <div className="hover:text-gray-300 cursor-pointer">NEW IN</div>
+          <Link to={"/newin"}>
+            <div className="hover:text-gray-300 cursor-pointer">NEW IN</div>
+          </Link>
           <div className="flex flex-col relative py-5 group">
             <div className="cursor-pointer hover:text-gray-300">APPAREL</div>
             <div className="absolute top-16 text-left z-50 p-4 *:p-2 !text-xs  !text-black border shadow bg-white hidden group-hover:block">
-              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300 ">
-                <p>T-SHIRTS</p>
-              </div>
-              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl  hover:text-gray-300">
-                <p>SHIRTS</p>
-              </div>
+              <Link to={"/tshirt"}>
+                <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300 ">
+                  <p>T-SHIRTS</p>
+                </div>
+              </Link>
+              <Link to={"/shirt"}>
+                <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl  hover:text-gray-300">
+                  <p>SHIRTS</p>
+                </div>
+              </Link>
+
               <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
                 <p>HOODIES</p>
               </div>

@@ -1,8 +1,9 @@
 import Bluorng from "../Bluorng";
-import Footer from "../Footer";
-import Header from "../Header";
-import Layout from "../Layout";
+
 import NewIn from "../NewIn";
+import Shirts from "../Shirts";
+
+import TShirt from "../T_Shirt";
 
 export const routes = [
   {
@@ -14,5 +15,15 @@ export const routes = [
     id: 1,
     path: "newin",
     element: <NewIn />,
+  },
+  {
+    id: 1,
+    path: "tshirt",
+    element: <TShirt />,
+  },
+  {
+    id: 1,
+    path: "/shirt",
+    element: <Shirts />,
   },
 ];
