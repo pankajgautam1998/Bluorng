@@ -584,22 +584,6 @@ const TShirt = () => {
 
       price: "RS. 3,495      ",
     },
-    {
-      id: 74,
-      image:
-        "https://bluorng.com/cdn/shop/products/olive-paisley-tee-688548.jpg?v=1668802325&width=360",
-      title: "OLIVE PAISLEY T-SHIRT      ",
-
-      price: "  RS. 3,495      ",
-    },
-    {
-      id: 75,
-      image:
-        "https://bluorng.com/cdn/shop/products/bw-heart-on-my-sleeve-tee-160711.jpg?v=1657284797&width=360",
-      title: "B/W HEART ON MY SLEEVE TEE      ",
-
-      price: "RS. 3,495      ",
-    },
   ];
   return (
     <>

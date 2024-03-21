@@ -25,6 +25,7 @@ import pinksnake from "../assests/pink snake  t shirt.webp";
 import marblegrey from "../assests/MARBLE GREY WAFFLE SHIRT.jpg";
 import bludenims from "../assests/BLU DENIMS.webp";
 import bluwaffle from "../assests/BLU WAFFLE SHIRT.webp";
+import { Link } from "react-router-dom";
 
 const New = () => {
   const imagearray = [
@@ -190,7 +191,9 @@ const New = () => {
     <>
       <div className="flex gap-5 border border-black p-2  justify-between px-10 items-center pr-[25rem] cursor-pointer text-xs font-sans ">
         <div>
-          <p className="underline">VIEW ALL</p>
+          <Link to={"/viewall"}>
+            <p className="underline">VIEW ALL</p>
+          </Link>
         </div>
         <div className="flex gap-12">
           <p>T-SHIRTS</p>

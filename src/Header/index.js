@@ -31,22 +31,31 @@ const Header = () => {
                   <p>SHIRTS</p>
                 </div>
               </Link>
-
-              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
-                <p>HOODIES</p>
-              </div>
-              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
-                <p>SWEATSHIRTS</p>
-              </div>
-              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
-                <p>SWEATSHIRTS</p>
-              </div>
-              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
-                <p>JEANS</p>
-              </div>
-              <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
-                <p>SHORTS</p>
-              </div>
+              <Link to={"/hoodies"}>
+                <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                  <p>HOODIES</p>
+                </div>
+              </Link>
+              <Link to={"/sweatshirts"}>
+                <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                  <p>SWEATSHIRTS</p>
+                </div>
+              </Link>
+              <Link to={"/cargos"}>
+                <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                  <p>CARGOS</p>
+                </div>
+              </Link>
+              <Link to={"/jeans"}>
+                <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                  <p>JEANS</p>
+                </div>
+              </Link>
+              <Link to={"/shorts"}>
+                <div className="cursor-pointer hover:bg-slate-50 hover:rounded-xl hover:text-gray-300">
+                  <p>SHORTS</p>
+                </div>
+              </Link>
             </div>
           </div>
           <div className=" flex flex-col relative group cursor-pointer py-5">
