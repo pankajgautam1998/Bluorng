@@ -589,8 +589,14 @@ const TShirt = () => {
     <>
       <div className="grid grid-cols-4 gap-1">
         {array.map((hello, index) => (
-          <div key={index} className="">
-            <img src={hello.image} alt="" />
+          <div key={index}>
+            <div key={index} className="overflow-hidden">
+              <img
+                src={hello.image}
+                alt=""
+                className="hover:scale-110 transition-all"
+              />
+            </div>
             <p>{hello.title}</p>
             <p>{hello.price}</p>
           </div>

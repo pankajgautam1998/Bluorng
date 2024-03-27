@@ -78,8 +78,14 @@ const Shirts = () => {
       <div className="grid grid-cols-4 gap-1">
         {array.map((img, index) => {
           return (
-            <div key={index}>
-              <img src={img.image} alt="" />
+            <div>
+              <div key={index} className="overflow-hidden">
+                <img
+                  src={img.image}
+                  alt=""
+                  className="transition-all hover:scale-110"
+                />
+              </div>
               <p>{img.name}</p>
               <p>{img.price}</p>
             </div>

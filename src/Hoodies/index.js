@@ -71,8 +71,14 @@ const Hoodies = () => {
     <>
       <div className="grid grid-cols-4">
         {array.map((i, index) => (
-          <div key={index}>
-            <img src={i.image} alt="" />
+          <div>
+            <div key={index} className="overflow-hidden">
+              <img
+                src={i.image}
+                alt=""
+                className="transition-all hover:scale-110"
+              />
+            </div>
             <p>{i.name}</p>
             <span className="flex gap-2">
               <s>{i.discount}</s>

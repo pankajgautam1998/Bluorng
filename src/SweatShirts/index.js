@@ -36,7 +36,13 @@ const SweatShirts = () => {
       <div className="grid grid-cols-4">
         {array.map((i) => (
           <div>
-            <img src={i.image} alt="" />
+            <div className="overflow-hidden">
+              <img
+                src={i.image}
+                alt=""
+                className="transition-all hover:scale-110"
+              />
+            </div>
             <p>{i.name}</p>
             <p>{i.price}</p>
           </div>

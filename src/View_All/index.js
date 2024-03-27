@@ -826,8 +826,14 @@ const ViewAll = () => {
     <>
       <div className="grid grid-cols-4">
         {array.map((i, index) => (
-          <div key={index}>
-            <img src={i.image} alt="" />
+          <div>
+            <div key={index} className="overflow-hidden">
+              <img
+                src={i.image}
+                alt=""
+                className="hover:scale-110 transition-all"
+              />
+            </div>
             <p>{i.name}</p>
             <span className="flex gap-1">
               <s>{i.discount}</s>

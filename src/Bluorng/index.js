@@ -47,45 +47,53 @@ const Bluorng = () => {
 
         <div>
           <div className="text-center ">SHOP ALL</div>
-          <div className="flex justify-between px-[1%] p-3">
+          <div className="flex justify-between px-[1%] p-3 ">
             <p>LATEST DROP</p>
             <p className="bg-slate-100 w-fit">DISCOVER MORE</p>
           </div>
         </div>
         <div className="flex px-[1%] gap-1 ">
           <div>
-            <img
-              src={firstimage}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
-            DUTCH BLU GARLAND T-SHIRT<p></p>
+            <div className="overflow-hidden">
+              <img
+                src={firstimage}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
+            <p>DUTCH BLU GARLAND T-SHIRT</p>
             <p>RS. 4,495</p>
           </div>
           <div>
-            <img
-              src={secondimage}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={secondimage}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>GREEN DRAGONFLY T-SHIRT</p>
             <p>RS. 4,495</p>
           </div>
           <div>
-            <img
-              src={thirdimage}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={thirdimage}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>BLIND DROP 7</p>
             <p>RS. 4,495</p>
           </div>
           <div>
-            <img
-              src={fourthimage}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={fourthimage}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>BLIND DROP 7.2</p>
             <p>RS. 4,495</p>
           </div>
@@ -93,85 +101,103 @@ const Bluorng = () => {
         <div className="text-center border border-black w-fit p-2 ml-[45%] hover:bg-black hover:text-white hover:rounded-full">
           DISCOVER MORE
         </div>
-        <div className="p-5">
+        <div className="p-5 overflow-hidden">
           <img src={expression} alt="" />
         </div>
         <div className="flex justify-between p-3">
           <p>MORE FROM BLUORNG</p>
           <p className="bg-slate-100 w-fit">DISCOVER MORE</p>
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-1 ">
           <div>
-            <img
-              src={d1}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={d1}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>DARK SHENRON T-SHIRT</p>
             <p>RS. 4,995</p>
           </div>
           <div>
-            <img
-              src={d2}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={d2}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>LILAC SNAKE T-SHIRT</p>
             <p>RS. 3,995</p>
           </div>
           <div>
-            <img
-              src={d3}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={d3}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>MUSTARD SHIZEN T-SHIRT</p>
             <p>RS. 3,995</p>
           </div>
           <div>
-            <img
-              src={d4}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={d4}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>BLU RACING T-SHIRT</p>
             <p>RS. 4,995</p>
           </div>
         </div>
         <div className="flex gap-1">
           <div>
-            <img
-              src={b1}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={b1}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>BLACK AFFECTION T-SHIRT</p>
             <p>RS. 4,495</p>
           </div>
+
           <div>
-            <img
-              src={b2}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={b2}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110 "
+              />
+            </div>
             <p>DUTCH BLU GARLAND T-SHIRT</p>
             <p>RS. 4,495</p>
           </div>
+
           <div>
-            <img
-              src={b3}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={b3}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>RED AFFECTION T-SHIRT</p>
             <p>RS. 4,495</p>
           </div>
           <div>
-            <img
-              src={b4}
-              alt=""
-              className=" transition-all duration-700 hover:scale-110"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={b4}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>BLIND DROP 7.2</p>
             <p>RS. 4,495</p>
           </div>

@@ -58,10 +58,16 @@ const Jeans = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 gap-1">
         {array.map((i, index) => (
-          <div key={index}>
-            <img src={i.image} alt="" />
+          <div>
+            <div key={index} className="overflow-hidden">
+              <img
+                src={i.image}
+                alt=""
+                className=" transition-all duration-700 hover:scale-110"
+              />
+            </div>
             <p>{i.name}</p>
             <p>{i.price}</p>
           </div>

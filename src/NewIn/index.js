@@ -189,22 +189,6 @@ const New = () => {
   ];
   return (
     <>
-      <div className="flex gap-5 border border-black p-2  justify-between px-10 items-center pr-[25rem] cursor-pointer text-xs font-sans ">
-        <div>
-          <Link to={"/viewall"}>
-            <p className="underline">VIEW ALL</p>
-          </Link>
-        </div>
-        <div className="flex gap-12">
-          <p>T-SHIRTS</p>
-          <p>SHIRTS</p>
-          <p>HOODIES</p>
-          <p>SWEATSHIRTS</p>
-          <p>CARGOS</p>
-          <p>JEANS</p>
-          <p>SHORTS</p>
-        </div>
-      </div>
       <div className="flex justify-between px-10 text-xs">
         <div className="flex ">
           <div className="flex  gap-5 justify-between">
@@ -238,13 +222,15 @@ const New = () => {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-2 ">
-        {imagearray.map((i) => (
+        {imagearray.map((i, index) => (
           <div>
-            <img
-              src={i.image}
-              alt=""
-              className="size-[30rem] hover:scale-110 "
-            />
+            <div key={index} className="overflow-hidden">
+              <img
+                src={i.image}
+                alt=""
+                className="size-[30rem] hover:scale-110 transition-all "
+              />
+            </div>
             <p>{i.title}</p>
             <p>{i.price}</p>
           </div>

@@ -1,5 +1,6 @@
 import Bluorng from "../Bluorng";
 import Cargos from "../Cargos";
+import CargosDetail from "../Cargos/CargosDetail";
 import Hoodies from "../Hoodies";
 import Jeans from "../Jeans";
 
@@ -46,6 +47,11 @@ export const routes = [
     id: 1,
     path: "/cargos",
     element: <Cargos />,
+  },
+  {
+    id: 1,
+    path: "/cargos/:Cargos_detail",
+    element: <CargosDetail />,
   },
   {
     id: 1,
