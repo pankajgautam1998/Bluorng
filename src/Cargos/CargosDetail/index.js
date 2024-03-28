@@ -59,7 +59,7 @@ const CargosDetail = () => {
   return (
     <>
       <div className="grid grid-cols-3">
-        <div className="">
+        <div className="mt-96">
           <div className="flex justify-between px-8">
             <p>OLIVE RIPSTOP CARGOS</p>
             <p>RS. 14,995</p>
@@ -87,7 +87,7 @@ const CargosDetail = () => {
           </div>
         </div>
 
-        <div className="justify-items-center">
+        <div className="justify-items-center overflow-scroll h-[36rem] scroll">
           {data.map((i, index) => (
             <div key={index}>
               <img src={i.image1} alt="" />
@@ -101,7 +101,7 @@ const CargosDetail = () => {
             </div>
           ))}
         </div>
-        <div className="px-[2rem] ">
+        <div className="px-[2rem] mt-96">
           <div className="flex justify-between ">
             <p>SIZE</p>
             <button className="bg-black text-white h-fit w-24 rounded-md p-1">

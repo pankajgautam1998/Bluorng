@@ -1,5 +1,6 @@
 import React from "react";
 import footerimage from "../assests/Screenshot_2024-03-15_151803-removebg-preview.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -21,18 +22,36 @@ const Footer = () => {
         <div className="flex gap-40 items-center pr-56 ">
           <div className="text-xs *:p-2">
             <p className="font-bold ">HELP</p>
-            <p>MEMBERS LOGIN</p>
-            <p>EXCHANGES/RETURNS</p>
-            <p>FAQ</p>
-            <p>TERMS</p>
-            <p>SHIPPING</p>
+            <Link to={"/memberslogin"}>
+              <p>MEMBERS LOGIN</p>
+            </Link>
+            <Link to={"/exchanges"}>
+              <p>EXCHANGES/RETURNS</p>
+            </Link>
+            <Link to={"/faq"}>
+              <p>FAQ</p>
+            </Link>
+            <Link to={"/terms"}>
+              <p>TERMS</p>
+            </Link>
+            <Link to={"/shipping"}>
+              <p>SHIPPING</p>
+            </Link>
           </div>
           <div className="text-xs *:p-2">
             <p className="font-bold">COMPANY</p>
-            <p>STORY</p>
-            <p>OUR STORES</p>
-            <p>CAREERS</p>
-            <p>CONTACT US</p>
+            <Link to={"/story"}>
+              <p>STORY</p>
+            </Link>
+            <Link to={"/ourstores"}>
+              <p>OUR STORES</p>
+            </Link>
+            <Link to={"/careers"}>
+              <p>CAREERS</p>
+            </Link>
+            <Link to={"/contactus"}>
+              <p>CONTACT US</p>
+            </Link>
           </div>
         </div>
       </div>
