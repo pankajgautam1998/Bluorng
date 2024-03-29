@@ -55,6 +55,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <div className="bg-black ">
         <div className="flex text-white font-bold text-xs justify-between">
           <div>
