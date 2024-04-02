@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Shorts = () => {
+  const navigate = useNavigate();
   const array = [
     {
       id: 1,
@@ -34,7 +36,11 @@ const Shorts = () => {
       <div className="grid grid-cols-4">
         {array.map((i, index) => (
           <div>
-            <div key={index} className="overflow-hidden">
+            <div
+              key={i.id}
+              onClick={() => navigate(`/shorts/${i.id}`)}
+              className="overflow-hidden"
+            >
               <img
                 src={i.image}
                 alt=""

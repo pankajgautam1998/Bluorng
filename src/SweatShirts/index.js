@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const SweatShirts = () => {
+  const navigate = useNavigate();
   const array = [
     {
       id: 1,
@@ -36,7 +38,11 @@ const SweatShirts = () => {
       <div className="grid grid-cols-4">
         {array.map((i) => (
           <div>
-            <div className="overflow-hidden">
+            <div
+              key={i.id}
+              onClick={() => navigate(`/sweatshirt/${i.id}`)}
+              className="overflow-hidden"
+            >
               <img
                 src={i.image}
                 alt=""

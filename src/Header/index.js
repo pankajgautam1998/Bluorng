@@ -6,8 +6,7 @@ const Header = () => {
   const { pathname } = useLocation();
   return (
     <>
-      {" "}
-      <div className="w-full bg-white z-50 sticky top-0 ">
+      <div className="w-full bg-white z-50 sticky top-0 max-lg:hidden">
         <div className="bg-black text-white text-center *:text-xs *:animate-bounce ">
           <p className="">BLUORNG</p>
           <p>EXTENSION OF YOUR EXPRESSION</p>
@@ -67,20 +66,44 @@ const Header = () => {
               <div className="cursor-pointer hover:text-gray-300">STORES</div>
               <div className="absolute top-16 bg-white text-xs *:p-2 text-black shadow hidden  z-50 group-hover:block border">
                 <div className="cursor-pointer hover:bg-slate-50 hover:text-gray-300">
-                  <p>DELHI</p>
+                  <Link
+                    target=" _blank"
+                    to={
+                      "https://www.google.com/maps/place/%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A5%81%E0%A4%93%E0%A4%B0%E0%A4%82%E0%A4%97/@19.0686574,72.8330452,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c95d987918c7:0x184414d17241aaf7!8m2!3d19.0686574!4d72.8330452!16s%2Fg%2F11tmn465z6?entry=ttu"
+                    }
+                  >
+                    <p>DELHI</p>
+                  </Link>
                 </div>
                 <div className="cursor-pointer hover:bg-slate-50 hover:text-gray-300">
-                  <p>MUMBAI</p>
+                  <Link
+                    target=" _blank"
+                    to={
+                      "https://www.google.com/maps/place/%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A5%81%E0%A4%93%E0%A4%B0%E0%A4%82%E0%A4%97/@19.0686574,72.8330452,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c95d987918c7:0x184414d17241aaf7!8m2!3d19.0686574!4d72.8330452!16s%2Fg%2F11tmn465z6?entry=ttu"
+                    }
+                  >
+                    <p>MUMBAI</p>
+                  </Link>
                 </div>
                 <div className="cursor-pointer hover:bg-slate-50 hover:text-gray-300">
-                  <p>HYDERABAD</p>
+                  <Link
+                    target=" _blank"
+                    to={
+                      "https://www.google.com/maps/place/%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A5%81%E0%A4%93%E0%A4%B0%E0%A4%82%E0%A4%97/@17.4210097,78.4429348,15z/data=!4m6!3m5!1s0x3bcb9718bd42dff9:0x7e93ffa3aeab2512!8m2!3d17.4210097!4d78.4429348!16s%2Fg%2F11vjmq91q_?entry=ttu"
+                    }
+                  >
+                    <p>HYDERABAD</p>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex gap-10 items-center">
             <p>SEARCH</p>
-            <p>LOGIN</p>
+            <Link to={"/memberslogin"}>
+              <p>LOGIN</p>
+            </Link>
+
             <p>
               <img
                 className="h-24"
@@ -123,6 +146,17 @@ const Header = () => {
           </div>
         </div>
       )}
+      <div className="flex justify-between items-center px-4 lg:hidden">
+        <p>Menu</p>
+        <Link to={"/"}>
+          <img src={bluorng} alt="" />
+        </Link>
+        <img
+          className="h-24"
+          src="https://cdn.shopify.com/s/files/1/0566/7192/8425/files/BO_GIF.gif?v=1704694751"
+          alt=""
+        />
+      </div>
     </>
   );
 };

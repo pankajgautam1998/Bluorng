@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import burgundy from "../assests/BURGUNDY INK T-SHIRT.webp";
 import bluink from "../assests/BLU INK T-SHIRT.webp";
 import dutch from "../assests/DUTCH BLU GARLAND T-SHIRT.webp";
@@ -25,9 +25,17 @@ import pinksnake from "../assests/pink snake  t shirt.webp";
 import marblegrey from "../assests/MARBLE GREY WAFFLE SHIRT.jpg";
 import bludenims from "../assests/BLU DENIMS.webp";
 import bluwaffle from "../assests/BLU WAFFLE SHIRT.webp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const New = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+      left: 0,
+    });
+  }, []);
+  const navigate = useNavigate();
   const imagearray = [
     {
       id: 1,
@@ -224,7 +232,11 @@ const New = () => {
       <div className="grid grid-cols-4 gap-2 ">
         {imagearray.map((i, index) => (
           <div>
-            <div key={index} className="overflow-hidden">
+            <div
+              key={i.id}
+              onClick={() => navigate(`/newin/${i.id}`)}
+              className="overflow-hidden"
+            >
               <img
                 src={i.image}
                 alt=""

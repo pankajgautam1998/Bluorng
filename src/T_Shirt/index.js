@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const TShirt = () => {
+  const navigate = useNavigate();
   const array = [
     {
       id: 1,
@@ -38,6 +40,7 @@ const TShirt = () => {
       id: 5,
       image:
         "https://bluorng.com/cdn/shop/files/DSC0960319.jpg?v=1707820698&width=360",
+      sold: "SOLD OUT",
       title: "FIRE SHENRON T-SHIRT   ",
 
       price: "RS. 4,995",
@@ -54,6 +57,7 @@ const TShirt = () => {
       id: 7,
       image:
         "https://bluorng.com/cdn/shop/files/utrnf.jpg?v=1709005578&width=360",
+      sold: "SOLD OUT",
       title: "BLU RACING T-SHIRT      ",
 
       price: "RS. 3,995",
@@ -86,6 +90,7 @@ const TShirt = () => {
       id: 11,
       image:
         "https://bluorng.com/cdn/shop/files/jewru.jpg?v=1708150749&width=360",
+      sold: "SOLD OUT",
       title: "DARK SHENRON T-SHIRT      ",
 
       price: "RS. 4,995      ",
@@ -109,6 +114,7 @@ const TShirt = () => {
     {
       id: 14,
       image: "https://bluorng.com/cdn/shop/files/2.jpg?v=1708315985&width=360",
+      sold: "SOLD OUT",
       title: "LILAC SNAKE T-SHIRT      ",
 
       price: "RS. 3,995      ",
@@ -133,6 +139,7 @@ const TShirt = () => {
       id: 17,
       image:
         "https://bluorng.com/cdn/shop/files/DSC0576016.jpg?v=1707823770&width=360",
+      sold: "SOLD OUT",
       title: "OFF WHITE SHIZEN T-SHIRT      ",
 
       price: "RS. 3,995      ",
@@ -157,6 +164,7 @@ const TShirt = () => {
       id: 20,
       image:
         "https://bluorng.com/cdn/shop/files/F2358F29-71DB-4DDB-B433-33F6A741038E.jpg?v=1703478260&width=360",
+      sold: "SOLD OUT",
       title: "MARS RED FULL SLEEVE T- SHIRT      ",
 
       price: "RS. 4,495      ",
@@ -189,6 +197,7 @@ const TShirt = () => {
       id: 24,
       image:
         "https://bluorng.com/cdn/shop/files/4E9F5B93-315A-40CD-8C99-4C2B4AA01120.jpg?v=1700973951&width=360",
+      sold: "SOLD OUT",
       title: "WHITE SPIDER T-SHIRT      ",
 
       price: "RS. 3,995      ",
@@ -220,6 +229,7 @@ const TShirt = () => {
       id: 28,
       image:
         "https://bluorng.com/cdn/shop/files/Untitled_Artwork826.jpg?v=1698493255&width=360",
+      sold: "SOLD OUT",
       title: "WORLD T-SHIRT      ",
 
       price: "RS. 3,995      ",
@@ -252,6 +262,7 @@ const TShirt = () => {
       id: 32,
       image:
         "https://bluorng.com/cdn/shop/files/Untitled_Artwork791_6dfab7b8-4493-48b0-bfd5-4f515a3d884f.jpg?v=1697345828&width=360",
+      sold: "SOLD OUT",
       title: "GREY SHARK T-SHIRT      ",
 
       price: "RS. 4,995      ",
@@ -292,6 +303,7 @@ const TShirt = () => {
       id: 37,
       image:
         "https://bluorng.com/cdn/shop/files/Untitled_Artwork792.jpg?v=1697345291&width=360",
+      sold: "SOLD OUT",
       title: "BLU TREASURE T-SHIRT      ",
 
       price: "RS. 4,995      ",
@@ -308,6 +320,7 @@ const TShirt = () => {
       id: 39,
       image:
         "https://bluorng.com/cdn/shop/files/Untitled_Artwork788.jpg?v=1697273367&width=360",
+      sold: "SOLD OUT",
       title: "WHITE UNCONDITIONAL LOVE T-SHIRT      ",
 
       price: "RS. 6,009      ",
@@ -316,6 +329,7 @@ const TShirt = () => {
       id: 40,
       image:
         "https://bluorng.com/cdn/shop/files/Untitled_Artwork783.jpg?v=1697264169&width=360",
+      sold: "SOLD OUT",
       title: "RED UNCONDITIONAL LOVE T-SHIRT      ",
 
       price: "RS. 6,009      ",
@@ -364,6 +378,7 @@ const TShirt = () => {
       id: 46,
       image:
         "https://bluorng.com/cdn/shop/files/Untitled_Artwork796_e029cb79-0940-4f1b-a84e-095dc27ff61b.jpg?v=1697346232&width=360",
+      sold: "SOLD OUT",
       title: "BLACK FOR THE ARTICLES T-SHIRT      ",
 
       price: "RS. 6,009      ",
@@ -396,6 +411,7 @@ const TShirt = () => {
       id: 50,
       image:
         "https://bluorng.com/cdn/shop/files/DSC05165185.jpg?v=1694434333&width=360",
+      sold: "SOLD OUT",
       title: "BASIC STRAWBERRY CREAM T-SHIRT      ",
 
       price: "RS. 3,995      ",
@@ -452,6 +468,7 @@ const TShirt = () => {
       id: 57,
       image:
         "https://bluorng.com/cdn/shop/files/DSC05165134.jpg?v=1692710241&width=360",
+      sold: "SOLD OUT",
       title: "WILL YOU (CREAM) T-SHIRT      ",
 
       price: "RS. 3,995      ",
@@ -468,6 +485,7 @@ const TShirt = () => {
       id: 59,
       image:
         "https://bluorng.com/cdn/shop/files/DSC05165106.jpg?v=1690268565&width=360",
+      sold: "SOLD OUT",
       title: "SPA BLU FLORAL T-SHIRT      ",
 
       price: "RS. 3,995      ",
@@ -501,6 +519,7 @@ const TShirt = () => {
       image:
         "https://bluorng.com/cdn/shop/files/DSC08071.jpg?v=1687339126&width=360",
       title: "CROCODILE T-SHIRT      ",
+      sold: "SOLD OUT",
 
       price: "RS. 3,995      ",
     },
@@ -548,6 +567,7 @@ const TShirt = () => {
       id: 69,
       image:
         "https://bluorng.com/cdn/shop/files/DSC05165.jpg?v=1683035239&width=360",
+      sold: "SOLD OUT",
       title: "BLU BASIC T-SHIRT      ",
 
       price: "RS. 3,495      ",
@@ -572,6 +592,7 @@ const TShirt = () => {
       id: 72,
       image:
         "https://bluorng.com/cdn/shop/products/black-cap-sleeve-croptop-759335.jpg?v=1671744051&width=360",
+      sold: "SOLD OUT",
       title: "BLACK CAP SLEEVE CROPTOP      ",
 
       price: "RS. 3,495      ",
@@ -580,6 +601,7 @@ const TShirt = () => {
       id: 73,
       image:
         "https://bluorng.com/cdn/shop/products/navy-cap-sleeve-croptop-778566.jpg?v=1671744051&width=360",
+      solds: "SOLD OUT",
       title: "NAVY CAP SLEEVE CROPTOP      ",
 
       price: "RS. 3,495      ",
@@ -589,14 +611,18 @@ const TShirt = () => {
     <>
       <div className="grid grid-cols-4 gap-1">
         {array.map((hello, index) => (
-          <div key={index}>
-            <div key={index} className="overflow-hidden">
+          <div key={hello.id} onClick={() => navigate(`/tshirt/${hello.id}`)}>
+            <div key={index} className="overflow-hidden relative">
               <img
                 src={hello.image}
                 alt=""
                 className="hover:scale-110 transition-all"
               />
+              <p className="absolute bottom-3 left-3 bg-white text-black p-2 text-sm">
+                {hello.sold}
+              </p>
             </div>
+
             <p>{hello.title}</p>
             <p>{hello.price}</p>
           </div>

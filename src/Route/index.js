@@ -15,14 +15,24 @@ import Ourstore from "../Ourstores";
 
 import Shipping from "../Shipping";
 import Shirts from "../Shirts";
+
 import Shorts from "../Shorts";
 import Sizechart from "../Sizechart";
 import Story from "../Story";
 import SweatShirts from "../SweatShirts";
 
 import TShirt from "../T_Shirt";
+import ShirtDetails from "../Shirts/ShirtDetails";
+import TshirtDetails from "../T_Shirt/T_ShirtDetails";
+
 import Terms from "../Terms";
 import ViewAll from "../View_All";
+import HoodiesDetails from "../Hoodies/Hoodiesdetails";
+import SweatShirtDetails from "../SweatShirts/SweatShirtDetails";
+import JeansDetails from "../Jeans/JeansDetails";
+import ShortsDetails from "../Shorts/ShortsDetails";
+import ViewAllDetails from "../View_All/ViewAllDetails";
+import NewInDetails from "../NewIn/NewInDetails";
 
 export const routes = [
   {
@@ -129,5 +139,45 @@ export const routes = [
     id: 1,
     path: "/contactus",
     element: <Contactus />,
+  },
+  {
+    id: 1,
+    path: "/tshirt/:tshirtdetails",
+    element: <TshirtDetails />,
+  },
+  {
+    id: 1,
+    path: "/shirt/:shirt_id",
+    element: <ShirtDetails />,
+  },
+  {
+    id: 1,
+    path: "/hoodies/:hoodies_id",
+    element: <HoodiesDetails />,
+  },
+  {
+    id: 1,
+    path: "sweatshirt/:sweatshirt_id",
+    element: <SweatShirtDetails />,
+  },
+  {
+    id: 1,
+    path: "/jeans/:jeans_id",
+    element: <JeansDetails />,
+  },
+  {
+    id: 1,
+    path: "/shorts/:shorts_id",
+    element: <ShortsDetails />,
+  },
+  {
+    id: 1,
+    path: "/viewall/:viewall_id",
+    element: <ViewAllDetails />,
+  },
+  {
+    id: 1,
+    path: "/newin/:newin_id",
+    element: <NewInDetails />,
   },
 ];

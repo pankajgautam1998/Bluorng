@@ -47,12 +47,12 @@ const Bluorng = () => {
 
         <div>
           <div className="text-center ">SHOP ALL</div>
-          <div className="flex justify-between px-[1%] p-3 ">
+          <div className="flex justify-between lg:px-[1%] px-3 p-3 ">
             <p>LATEST DROP</p>
             <p className="bg-slate-100 w-fit">DISCOVER MORE</p>
           </div>
         </div>
-        <div className="flex px-[1%] gap-1 ">
+        <div className="lg:flex grid grid-cols-2 px-[1%] gap-1 ">
           <div>
             <div className="overflow-hidden">
               <img
@@ -98,9 +98,9 @@ const Bluorng = () => {
             <p>RS. 4,495</p>
           </div>
         </div>
-        <div className="text-center border border-black w-fit p-2 ml-[45%] hover:bg-black hover:text-white hover:rounded-full">
+        <button className="text-center border border-black  p-2 lg:ml-[45%] ml-[30%] m-4 hover:bg-black hover:text-white hover:rounded-full">
           DISCOVER MORE
-        </div>
+        </button>
         <div className="p-5 overflow-hidden">
           <img src={expression} alt="" />
         </div>
@@ -108,7 +108,7 @@ const Bluorng = () => {
           <p>MORE FROM BLUORNG</p>
           <p className="bg-slate-100 w-fit">DISCOVER MORE</p>
         </div>
-        <div className="flex gap-1 ">
+        <div className="lg:flex grid grid-cols-2 gap-1 ">
           <div>
             <div className="overflow-hidden">
               <img
@@ -154,7 +154,7 @@ const Bluorng = () => {
             <p>RS. 4,995</p>
           </div>
         </div>
-        <div className="flex gap-1">
+        <div className=" lg:flex grid grid-cols-2 gap-1">
           <div>
             <div className="overflow-hidden">
               <img
@@ -202,10 +202,10 @@ const Bluorng = () => {
             <p>RS. 4,495</p>
           </div>
         </div>
-        <div className=" text-center border border-black p-2  w-fit ml-[45%] hover:bg-black hover:text-white hover:rounded-full text-xs font-sans">
+        <button className=" text-center border border-black p-2  w-fit lg:ml-[45%] ml-[30%] m-4 hover:bg-black hover:text-white hover:rounded-full text-xs font-sans">
           DISCOVER MORE
-        </div>
-        <div className="flex gap-2 px-[3%] p-5">
+        </button>
+        <div className="flex max-lg:overflow-scroll gap-2 px-[3%] p-5">
           <div className="w-[33%]">
             <video autoPlay controls={false} muted loop>
               <source src="https://cdn.shopify.com/videos/c/o/v/cd5529a970f5492fb7c37efb012e98d5.mp4" />
