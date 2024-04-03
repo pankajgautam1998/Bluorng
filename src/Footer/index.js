@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="slider-container ">
+      <div className="slider-container  bg-black text-white pb-3">
         <Slider {...settings}>
           <div>
             <h3 className="max-lg:text-xs pt-2">SHIPPING WORLDWIDE</h3>

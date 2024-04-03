@@ -6,7 +6,7 @@ const Header = () => {
   const { pathname } = useLocation();
   return (
     <>
-      <div className="w-full bg-white z-50 sticky top-0 max-lg:hidden">
+      <div className="w-full bg-gray-200 z-50 sticky top-0 max-lg:hidden">
         <div className="bg-black text-white text-center *:text-xs *:animate-bounce ">
           <p className="">BLUORNG</p>
           <p>EXTENSION OF YOUR EXPRESSION</p>
@@ -100,6 +100,7 @@ const Header = () => {
           </div>
           <div className="flex gap-10 items-center">
             <p>SEARCH</p>
+
             <Link to={"/memberslogin"}>
               <p>LOGIN</p>
             </Link>

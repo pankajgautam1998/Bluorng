@@ -44,7 +44,11 @@ const Bluorng = () => {
             </p>
           </div>
         </div> */}
-
+        <div className="lg:hidden">
+          <video controls={false} autoPlay muted loop>
+            <source src="  https://cdn.shopify.com/videos/c/o/v/f2a4632c26694825a23f161bac33dc00.mp4" />
+          </video>
+        </div>
         <div>
           <div className="text-center ">SHOP ALL</div>
           <div className="flex justify-between lg:px-[1%] px-3 p-3 ">

@@ -97,9 +97,11 @@ const Shirts = () => {
                   alt=""
                   className="transition-all hover:scale-110 "
                 />
-                <p className="absolute bottom-2 left-3 bg-white p-1 text-xs">
-                  {img.sold}
-                </p>
+                {img.sold && (
+                  <p className="absolute bottom-2 left-3 bg-white p-1 text-xs">
+                    {img.sold}
+                  </p>
+                )}
               </div>
 
               <p>{img.name}</p>

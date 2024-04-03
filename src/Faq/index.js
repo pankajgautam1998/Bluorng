@@ -3,26 +3,29 @@ import classNames from "classnames";
 import React, { useState } from "react";
 
 const Faq = () => {
-  const [page, setPage] = useState("Product");
+  const [page, setPage] = useState("DELIVERY");
   return (
     <>
       <div className="bg-gray-200 px-[5rem]">
         <div className="flex justify-center pt-10">
           <p>FAQ'S</p>
         </div>
-        <div className="grid grid-cols-6 px-[5rem] ">
+        <div className="grid grid-cols-6 px-[1rem] ">
           <div>
             <button
-              onClick={() => setPage("Product")}
+              onClick={() => setPage("PRODUCT")}
               className={classNames(
                 " h-fit  w-44 p-3 items-center",
-                page === "PRODUCT" ? "bg-white" : "bg-black text-white"
+                page === "PRODUCT"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
               )}
             >
               PRODUCT
             </button>
-            {page === "Product" && (
+            {page === "PRODUCT" && (
               <div className="pt-10  w-[80rem]">
+                {" "}
                 <Accordion>
                   <AccordionSummary>
                     <p>WHAT IS MY RIGHT SIZE?</p>
@@ -239,7 +242,7 @@ const Faq = () => {
               </div>
             )}
             {page === "ORDER" && (
-              <div className="pt-10">
+              <div className="pt-10  w-[80rem]">
                 <Accordion>
                   <AccordionSummary>
                     <p>HOW DO I CONFIRM MY ORDER STATUS?</p>
@@ -381,7 +384,7 @@ const Faq = () => {
               </div>
             )}
             {page === "ORDER RECEIVED" && (
-              <div className="pt-10">
+              <div className="pt-10 w-[80rem]">
                 <Accordion>
                   <AccordionSummary>
                     <p>
@@ -415,7 +418,7 @@ const Faq = () => {
               </div>
             )}
             {page === "EXCHANGES" && (
-              <div className="pt-10">
+              <div className="pt-10 w-[80rem]">
                 <Accordion>
                   <AccordionSummary>
                     <p>CAN I EXCHANGE AN ITEM?</p>
@@ -501,7 +504,7 @@ const Faq = () => {
               </div>
             )}
             {page === "GENERAL FAQS" && (
-              <div className="pt-10">
+              <div className="pt-10 w-[80rem]">
                 <Accordion>
                   <AccordionSummary>
                     <p>CAN I GET A GST RECEIPT FOR MY ORDER?</p>
@@ -612,12 +615,15 @@ const Faq = () => {
               </div>
             )}
           </div>
+
           <div>
             <button
               onClick={() => setPage("DELIVERY")}
               className={classNames(
                 "h-fit w-44 p-3 items-center",
-                page === "DELIVERY" ? "bg-white" : "bg-black text-white"
+                page === "DELIVERY"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
               )}
             >
               DELIVERY
@@ -627,7 +633,9 @@ const Faq = () => {
             <button
               className={classNames(
                 " h-fit  w-44 p-3 items-center",
-                page === "ORDER" ? "bg-white" : "bg-black text-white"
+                page === "ORDER"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
               )}
               onClick={() => setPage("ORDER")}
             >
@@ -638,7 +646,9 @@ const Faq = () => {
             <button
               className={classNames(
                 " h-fit w-44 p-3 items-center",
-                page === "ORDER RECEIVED" ? "bg-white" : "bg-black text-white"
+                page === "ORDER RECEIVED"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
               )}
               onClick={() => setPage("ORDER RECEIVED")}
             >
@@ -649,7 +659,9 @@ const Faq = () => {
             <button
               className={classNames(
                 " h-fit  w-44 p-3 items-center",
-                page === "EXCHANGES" ? "bg-white" : "bg-black text-white "
+                page === "EXCHANGES"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white "
               )}
               onClick={() => setPage("EXCHANGES")}
             >
@@ -660,7 +672,9 @@ const Faq = () => {
             <button
               className={classNames(
                 " h-fit  w-44 p-3 items-center",
-                page === "GENERAL FAQS" ? "bg-white" : "bg-black text-white"
+                page === "GENERAL FAQS"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
               )}
               onClick={() => setPage("GENERAL FAQS")}
             >

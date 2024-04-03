@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const TShirt = () => {
+  const [page, setPage] = useState();
   const navigate = useNavigate();
+
   const array = [
     {
       id: 1,
@@ -618,9 +620,12 @@ const TShirt = () => {
                 alt=""
                 className="hover:scale-110 transition-all"
               />
-              <p className="absolute bottom-3 left-3 bg-white text-black p-2 text-sm">
-                {hello.sold}
-              </p>
+
+              {hello.sold && (
+                <p className="absolute bottom-3 left-3 bg-white text-black p-2 text-sm">
+                  {hello.sold}
+                </p>
+              )}
             </div>
 
             <p>{hello.title}</p>

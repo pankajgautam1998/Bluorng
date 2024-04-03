@@ -3,6 +3,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const TshirtDetails = () => {
+  const [page, setPage] = useState("DESCRIPTION");
+  const [open, setOpen] = useState(false);
   const array = [
     {
       id: 1,
@@ -56,9 +58,10 @@ const TshirtDetails = () => {
   ]);
 
   console.log(data);
+  console.log(open);
   return (
     <>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 h-screen">
         <div className="mt-96">
           <div className="flex justify-between px-8">
             <p>OLIVE RIPSTOP CARGOS</p>
@@ -66,24 +69,29 @@ const TshirtDetails = () => {
           </div>
 
           <div className="flex justify-between px-20">
-            <button>DESCRIPTION</button>
-            <button>SHIPPING</button>
+            <button onClick={() => setPage("DESCRIPTION")}>DESCRIPTION</button>
+            <button onClick={() => setPage("SHIPPING")}>SHIPPING</button>
           </div>
-          <div>
-            <p className="text-xs">
-              BLUORNG OLIVE RIPSTOP CARGO IS IN OLIVE COLOUR. THE DESIGN IS
-              INSPIRED FROM BLUORNG’S TAKE ON CARGOS. THE MATERIAL IS PREMIUM
-              QUALITY AND TEXTURED; DOESNT RIP. THE CARGOS ARE CONVERTIBLE INTO
-              SHORTS AND CAN BE STYLED IN MULTIPLE WAYS. THERE ARE 2 DETACHABLE
-              POCKETS, LOW HANGING SUSPENDERS ON EACH SIDE AND 12 MORE
-              MULTIPURPOSE POCKETS. THE FIT IS A BLUORNG’S BAGGY FLARED FIT.
-            </p>
-          </div>
-          <div>
-            <p className="text-xs">PACKED WITHIN 24 HOURS.</p>
-            <p className="text-xs">FREE DELIVERY PAN-INDIA.</p>
-            <p className="text-xs">DISPATCHES NEXT DAY</p>
-          </div>
+          {page === "DESCRIPTION" && (
+            <div>
+              <p className="text-xs">
+                BLUORNG OLIVE RIPSTOP CARGO IS IN OLIVE COLOUR. THE DESIGN IS
+                INSPIRED FROM BLUORNG’S TAKE ON CARGOS. THE MATERIAL IS PREMIUM
+                QUALITY AND TEXTURED; DOESNT RIP. THE CARGOS ARE CONVERTIBLE
+                INTO SHORTS AND CAN BE STYLED IN MULTIPLE WAYS. THERE ARE 2
+                DETACHABLE POCKETS, LOW HANGING SUSPENDERS ON EACH SIDE AND 12
+                MORE MULTIPURPOSE POCKETS. THE FIT IS A BLUORNG’S BAGGY FLARED
+                FIT.
+              </p>
+            </div>
+          )}
+          {page === "SHIPPING" && (
+            <div>
+              <p className="text-xs">PACKED WITHIN 24 HOURS.</p>
+              <p className="text-xs">FREE DELIVERY PAN-INDIA.</p>
+              <p className="text-xs">DISPATCHES NEXT DAY</p>
+            </div>
+          )}
         </div>
 
         <div className="justify-items-center overflow-scroll h-[36rem] scroll">
@@ -101,82 +109,87 @@ const TshirtDetails = () => {
           ))}
         </div>
         <div className="px-[2rem] mt-96">
-          <div className="mb-0">
-            <div className="flex flex-col items-center mb-2">
-              <p>SIZE CHART</p>
-              <table className="">
-                <tbody>
-                  <tr>
-                    <th className="border border-gray-400 p-1">WAIST</th>
-                    <th className="border  border-gray-400 p-1">LENGTH</th>
-                    <th className="border  border-gray-400 p-1">
-                      BOTTOM
-                      <br />
-                      WIDTH
-                    </th>
-                    <th className="border  border-gray-400 p-1">ROUND</th>
-                    <th className="border  border-gray-400 p-1">THIGH</th>
-                    <th className="border  border-gray-400 p-1">
-                      SHORTS
-                      <br />
-                      LENGTH
-                    </th>
-                  </tr>
-                  <tr className="border  border-gray-400">
-                    <td className="border  border-gray-400 p-3">28"</td>
-                    <td className="border  border-gray-400 p-3">44"</td>
-                    <td className="border  border-gray-400 p-3">24"</td>
-                    <td className="border  border-gray-400 p-3">25.5"</td>
-                    <td className="border  border-gray-400 p-3">22"</td>
-                    <td className="border  border-gray-400 p-3">21.5"</td>
-                  </tr>
-                  <tr className="border  border-gray-400 p-3">
-                    <td className="border  border-gray-400 p-3">30"</td>
-                    <td className="border  border-gray-400 p-3">44"</td>
-                    <td className="border  border-gray-400 p-3">24"</td>
-                    <td className="border  border-gray-400 p-3">27"</td>
-                    <td className="border  border-gray-400 p-3">22"</td>
-                    <td className="border  border-gray-400 p-3">21.5"</td>
-                  </tr>
-                  <tr className="border  border-gray-400 p-3">
-                    <td className="border  border-gray-400 p-3">32"</td>
-                    <td className="border  border-gray-400 p-3">44"</td>
-                    <td className="border  border-gray-400 p-3">24"</td>
-                    <td className="border  border-gray-400 p-3">28"</td>
-                    <td className="border  border-gray-400 p-3">24"</td>
-                    <td className="border  border-gray-400 p-3">21.5"</td>
-                  </tr>
-                  <tr className="border  border-gray-400 p-3">
-                    <td className="border  border-gray-400 p-3">34"</td>
-                    <td className="border  border-gray-400 p-3">44"</td>
-                    <td className="border  border-gray-400 p-3">24"</td>
-                    <td className="border  border-gray-400 p-3">28.5"</td>
-                    <td className="border  border-gray-400 p-3">26"</td>
-                    <td className="border  border-gray-400 p-3">21.5"</td>
-                  </tr>
-                  <tr className="border  border-gray-400 p-3">
-                    <td className="border  border-gray-400 p-3">36"</td>
-                    <td className="border  border-gray-400 p-3">44"</td>
-                    <td className="border  border-gray-400 p-3">24"</td>
-                    <td className="border  border-gray-400 p-3">29.5"</td>
-                    <td className="border  border-gray-400 p-3">26"</td>
-                    <td className="border  border-gray-400 p-3 ">21.5"</td>
-                  </tr>
-                  <tr className="border  border-gray-400 p-3">
-                    <td className="border  border-gray-400 p-3">38"</td>
-                    <td className="border  border-gray-400 p-3">44"</td>
-                    <td className="border  border-gray-400 p-3">24"</td>
-                    <td className="border  border-gray-400 p-3">31"</td>
-                    <td className="border  border-gray-400 p-3">22"</td>
-                    <td className="border  border-gray-400 p-3">21.5"</td>
-                  </tr>
-                </tbody>
-              </table>
+          {open && (
+            <div className="mb-0">
+              <div className="flex flex-col items-center mb-2">
+                <p>SIZE CHART</p>
+                <table className="">
+                  <tbody>
+                    <tr>
+                      <th className="border border-gray-400 p-1">WAIST</th>
+                      <th className="border  border-gray-400 p-1">LENGTH</th>
+                      <th className="border  border-gray-400 p-1">
+                        BOTTOM
+                        <br />
+                        WIDTH
+                      </th>
+                      <th className="border  border-gray-400 p-1">ROUND</th>
+                      <th className="border  border-gray-400 p-1">THIGH</th>
+                      <th className="border  border-gray-400 p-1">
+                        SHORTS
+                        <br />
+                        LENGTH
+                      </th>
+                    </tr>
+                    <tr className="border  border-gray-400">
+                      <td className="border  border-gray-400 p-3">28"</td>
+                      <td className="border  border-gray-400 p-3">44"</td>
+                      <td className="border  border-gray-400 p-3">24"</td>
+                      <td className="border  border-gray-400 p-3">25.5"</td>
+                      <td className="border  border-gray-400 p-3">22"</td>
+                      <td className="border  border-gray-400 p-3">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 p-3">
+                      <td className="border  border-gray-400 p-3">30"</td>
+                      <td className="border  border-gray-400 p-3">44"</td>
+                      <td className="border  border-gray-400 p-3">24"</td>
+                      <td className="border  border-gray-400 p-3">27"</td>
+                      <td className="border  border-gray-400 p-3">22"</td>
+                      <td className="border  border-gray-400 p-3">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 p-3">
+                      <td className="border  border-gray-400 p-3">32"</td>
+                      <td className="border  border-gray-400 p-3">44"</td>
+                      <td className="border  border-gray-400 p-3">24"</td>
+                      <td className="border  border-gray-400 p-3">28"</td>
+                      <td className="border  border-gray-400 p-3">24"</td>
+                      <td className="border  border-gray-400 p-3">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 p-3">
+                      <td className="border  border-gray-400 p-3">34"</td>
+                      <td className="border  border-gray-400 p-3">44"</td>
+                      <td className="border  border-gray-400 p-3">24"</td>
+                      <td className="border  border-gray-400 p-3">28.5"</td>
+                      <td className="border  border-gray-400 p-3">26"</td>
+                      <td className="border  border-gray-400 p-3">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 p-3">
+                      <td className="border  border-gray-400 p-3">36"</td>
+                      <td className="border  border-gray-400 p-3">44"</td>
+                      <td className="border  border-gray-400 p-3">24"</td>
+                      <td className="border  border-gray-400 p-3">29.5"</td>
+                      <td className="border  border-gray-400 p-3">26"</td>
+                      <td className="border  border-gray-400 p-3 ">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 p-3">
+                      <td className="border  border-gray-400 p-3">38"</td>
+                      <td className="border  border-gray-400 p-3">44"</td>
+                      <td className="border  border-gray-400 p-3">24"</td>
+                      <td className="border  border-gray-400 p-3">31"</td>
+                      <td className="border  border-gray-400 p-3">22"</td>
+                      <td className="border  border-gray-400 p-3">21.5"</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
+          )}
           <div className="flex justify-between ">
             <p>SIZE</p>
-            <button className="bg-black text-white h-fit w-24 rounded-md p-1">
+            <button
+              className="bg-black text-white h-fit w-24 rounded-md p-1"
+              onClick={() => setOpen(!open)}
+            >
               SIZE CHART
             </button>
           </div>
