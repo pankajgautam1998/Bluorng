@@ -60,7 +60,7 @@ const Jeans = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-4 gap-1">
+      <div className="grid lg:grid-cols-4 grid-cols-2 max-lg:pt-[9rem] gap-1">
         {array.map((i, index) => (
           <div>
             <div

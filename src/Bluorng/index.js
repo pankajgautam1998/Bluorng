@@ -13,6 +13,7 @@ import b1 from "../assests/b1.webp";
 import b2 from "../assests/b2.webp";
 import b3 from "../assests/b3.webp";
 import b4 from "../assests/b4.webp";
+import { Link } from "react-router-dom";
 
 const Bluorng = () => {
   return (
@@ -50,14 +51,16 @@ const Bluorng = () => {
           </video>
         </div>
         <div>
-          <div className="text-center ">SHOP ALL</div>
+          <Link to={"/viewall"}>
+            <div className="text-center ">SHOP ALL</div>
+          </Link>
           <div className="flex justify-between lg:px-[1%] px-3 p-3 ">
             <p>LATEST DROP</p>
             <p className="bg-slate-100 w-fit">DISCOVER MORE</p>
           </div>
         </div>
         <div className="lg:flex grid grid-cols-2 px-[1%] gap-1 ">
-          <div>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={firstimage}
@@ -67,8 +70,8 @@ const Bluorng = () => {
             </div>
             <p>DUTCH BLU GARLAND T-SHIRT</p>
             <p>RS. 4,495</p>
-          </div>
-          <div>
+          </Link>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={secondimage}
@@ -78,8 +81,8 @@ const Bluorng = () => {
             </div>
             <p>GREEN DRAGONFLY T-SHIRT</p>
             <p>RS. 4,495</p>
-          </div>
-          <div>
+          </Link>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={thirdimage}
@@ -89,8 +92,8 @@ const Bluorng = () => {
             </div>
             <p>BLIND DROP 7</p>
             <p>RS. 4,495</p>
-          </div>
-          <div>
+          </Link>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={fourthimage}
@@ -100,11 +103,14 @@ const Bluorng = () => {
             </div>
             <p>BLIND DROP 7.2</p>
             <p>RS. 4,495</p>
-          </div>
+          </Link>
         </div>
-        <button className="text-center border border-black  p-2 lg:ml-[45%] ml-[30%] m-4 hover:bg-black hover:text-white hover:rounded-full">
-          DISCOVER MORE
-        </button>
+        <Link to={"/newin"}>
+          <button className="text-center border border-black  p-2 lg:ml-[45%] ml-[30%] m-4 hover:bg-black hover:text-white hover:rounded-full duration-300">
+            DISCOVER MORE
+          </button>
+        </Link>
+
         <div className="p-5 overflow-hidden">
           <img src={expression} alt="" />
         </div>
@@ -113,7 +119,7 @@ const Bluorng = () => {
           <p className="bg-slate-100 w-fit">DISCOVER MORE</p>
         </div>
         <div className="lg:flex grid grid-cols-2 gap-1 ">
-          <div>
+          <Link to="newin/1">
             <div className="overflow-hidden">
               <img
                 src={d1}
@@ -123,8 +129,8 @@ const Bluorng = () => {
             </div>
             <p>DARK SHENRON T-SHIRT</p>
             <p>RS. 4,995</p>
-          </div>
-          <div>
+          </Link>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={d2}
@@ -134,8 +140,8 @@ const Bluorng = () => {
             </div>
             <p>LILAC SNAKE T-SHIRT</p>
             <p>RS. 3,995</p>
-          </div>
-          <div>
+          </Link>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={d3}
@@ -145,8 +151,8 @@ const Bluorng = () => {
             </div>
             <p>MUSTARD SHIZEN T-SHIRT</p>
             <p>RS. 3,995</p>
-          </div>
-          <div>
+          </Link>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={d4}
@@ -156,10 +162,10 @@ const Bluorng = () => {
             </div>
             <p>BLU RACING T-SHIRT</p>
             <p>RS. 4,995</p>
-          </div>
+          </Link>
         </div>
         <div className=" lg:flex grid grid-cols-2 gap-1">
-          <div>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={b1}
@@ -169,9 +175,9 @@ const Bluorng = () => {
             </div>
             <p>BLACK AFFECTION T-SHIRT</p>
             <p>RS. 4,495</p>
-          </div>
+          </Link>
 
-          <div>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={b2}
@@ -181,9 +187,9 @@ const Bluorng = () => {
             </div>
             <p>DUTCH BLU GARLAND T-SHIRT</p>
             <p>RS. 4,495</p>
-          </div>
+          </Link>
 
-          <div>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={b3}
@@ -193,8 +199,8 @@ const Bluorng = () => {
             </div>
             <p>RED AFFECTION T-SHIRT</p>
             <p>RS. 4,495</p>
-          </div>
-          <div>
+          </Link>
+          <Link to={"/newin/1"}>
             <div className="overflow-hidden">
               <img
                 src={b4}
@@ -204,11 +210,14 @@ const Bluorng = () => {
             </div>
             <p>BLIND DROP 7.2</p>
             <p>RS. 4,495</p>
-          </div>
+          </Link>
         </div>
-        <button className=" text-center border border-black p-2  w-fit lg:ml-[45%] ml-[30%] m-4 hover:bg-black hover:text-white hover:rounded-full text-xs font-sans">
-          DISCOVER MORE
-        </button>
+        <Link to={"/viewall"}>
+          <button className=" text-center border border-black p-2  w-fit lg:ml-[45%] ml-[30%] m-4 hover:bg-black hover:text-white hover:rounded-full text-xs font-sans duration-300">
+            DISCOVER MORE
+          </button>
+        </Link>
+
         <div className="flex max-lg:overflow-scroll gap-2 px-[3%] p-5">
           <div className="w-[33%]">
             <video autoPlay controls={false} muted loop>

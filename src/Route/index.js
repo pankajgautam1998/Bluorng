@@ -33,6 +33,7 @@ import JeansDetails from "../Jeans/JeansDetails";
 import ShortsDetails from "../Shorts/ShortsDetails";
 import ViewAllDetails from "../View_All/ViewAllDetails";
 import NewInDetails from "../NewIn/NewInDetails";
+import BluorngDetails from "../Bluorng/BluorngDetails";
 
 export const routes = [
   {
@@ -179,5 +180,10 @@ export const routes = [
     id: 1,
     path: "/newin/:newin_id",
     element: <NewInDetails />,
+  },
+  {
+    id: 1,
+    path: "//:bluorng_id",
+    element: <BluorngDetails />,
   },
 ];

@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import bluorng from "../assests/Screenshot_2024-03-22_101716-removebg-preview.png";
 import { Link, useLocation } from "react-router-dom";
+import { Close } from "@mui/icons-material";
+import { IconButton } from "@mui/material";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  console.log(open);
   return (
     <>
-      <div className="w-full bg-gray-200 z-50 sticky top-0 max-lg:hidden">
+      <div className="w-full bg-gray-200 z-50 sticky top-0 max-lg:hidden ">
         <div className="bg-black text-white text-center *:text-xs *:animate-bounce ">
           <p className="">BLUORNG</p>
           <p>EXTENSION OF YOUR EXPRESSION</p>
         </div>
 
-        <div className="flex justify-between px-[3%] pt-5 items-center text-center">
+        <div className="flex justify-between px-[3%]  items-center text-center relative">
           <div className=" text-center items-center">
             <Link to={"/"}>
               <img src={bluorng} alt="" />
             </Link>
           </div>
-          <div className="flex gap-5 items-center pr-[20rem]">
+          <div className="flex gap-5 items-center pr-[20rem] ">
             <Link to={"/newin"}>
               <div className="hover:text-gray-300 cursor-pointer">NEW IN</div>
             </Link>
@@ -99,7 +103,9 @@ const Header = () => {
             </div>
           </div>
           <div className="flex gap-10 items-center">
-            <p>SEARCH</p>
+            <p className="px-0" onClick={() => setOpen(!open)}>
+              SEARCH
+            </p>
 
             <Link to={"/memberslogin"}>
               <p>LOGIN</p>
@@ -116,15 +122,15 @@ const Header = () => {
         </div>
       </div>{" "}
       {pathname !== "/" && (
-        <div className="flex sticky top-[148px] z-40 bg-white gap-5 border border-black p-2  justify-between px-10 items-center pr-[25rem] cursor-pointer text-xs font-sans ">
+        <div className="flex max-lg:overflow-y-scroll  max-lg:fixed w-full lg:top-[128px] top-[90px] z-40 bg-white gap-5 border border-black p-2  justify-between px-10 items-center pr-[25rem] cursor-pointer text-xs font-sans ">
           <div>
             <Link to={"/viewall"}>
-              <p className="underline">VIEW ALL</p>
+              <p className="underline w-20 text-base">VIEW ALL</p>
             </Link>
           </div>
-          <div className="flex gap-12">
+          <div className="flex lg:gap-12 gap-5 text-base">
             <Link to={"/tshirt"}>
-              <p>T-SHIRTS</p>
+              <p>T_SHIRTS</p>
             </Link>
             <Link to={"/shirt"}>
               <p>SHIRTS</p>
@@ -147,7 +153,7 @@ const Header = () => {
           </div>
         </div>
       )}
-      <div className="flex justify-between items-center px-4 lg:hidden">
+      <div className="flex justify-between items-center max-lg:fixed max-lg:z-50 max-lg:w-full bg-gray-200 lg:hidden">
         <p>Menu</p>
         <Link to={"/"}>
           <img src={bluorng} alt="" />
@@ -157,6 +163,22 @@ const Header = () => {
           src="https://cdn.shopify.com/s/files/1/0566/7192/8425/files/BO_GIF.gif?v=1704694751"
           alt=""
         />
+      </div>
+      <div className="absolute top-[2rem] z-50 bg-gray-200">
+        {open && (
+          <div className=" text-black">
+            <p>SEARCH</p>
+            <p className="flex items-center">
+              <input
+                type="search"
+                className="w-[92.5rem] h-16 outline-none bg-gray-200"
+              />
+              <IconButton onClick={() => setOpen(false)}>
+                <Close />
+              </IconButton>
+            </p>
+          </div>
+        )}
       </div>
     </>
   );

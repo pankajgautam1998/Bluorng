@@ -33,7 +33,7 @@ const Shorts = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-4">
+      <div className="grid lg:grid-cols-4 grid-cols-2 max-lg:pt-[9rem]">
         {array.map((i, index) => (
           <div>
             <div

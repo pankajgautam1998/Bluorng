@@ -826,7 +826,7 @@ const ViewAll = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-4">
+      <div className="grid lg:grid-cols-4 grid-cols-2">
         {array.map((i, index) => (
           <div>
             <div

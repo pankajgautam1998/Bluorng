@@ -611,7 +611,7 @@ const TShirt = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-4 gap-1">
+      <div className="grid lg:grid-cols-4 grid-cols-2 max-lg:pt-[9rem] gap-1">
         {array.map((hello, index) => (
           <div key={hello.id} onClick={() => navigate(`/tshirt/${hello.id}`)}>
             <div key={index} className="overflow-hidden relative">
