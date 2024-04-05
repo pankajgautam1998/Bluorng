@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const MembersLogin = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+      left: 0,
+    });
+  }, []);
   return (
     <>
-      <div className=" h-screen">
+      <div className="lg: h-screen max-lg:pt-24">
         <div className=" flex justify-center pt-10">LOGIN</div>
         <div className="flex flex-col items-center pt-10 text-xs">
           <div>

@@ -17,7 +17,7 @@ import Shipping from "../Shipping";
 import Shirts from "../Shirts";
 
 import Shorts from "../Shorts";
-import Sizechart from "../Sizechart";
+
 import Story from "../Story";
 import SweatShirts from "../SweatShirts";
 
@@ -33,7 +33,6 @@ import JeansDetails from "../Jeans/JeansDetails";
 import ShortsDetails from "../Shorts/ShortsDetails";
 import ViewAllDetails from "../View_All/ViewAllDetails";
 import NewInDetails from "../NewIn/NewInDetails";
-import BluorngDetails from "../Bluorng/BluorngDetails";
 
 export const routes = [
   {
@@ -91,11 +90,7 @@ export const routes = [
     path: "/viewall",
     element: <ViewAll />,
   },
-  {
-    id: 1,
-    path: "/sizechart",
-    element: <Sizechart />,
-  },
+
   {
     id: 1,
     path: "/memberslogin",
@@ -180,10 +175,5 @@ export const routes = [
     id: 1,
     path: "/newin/:newin_id",
     element: <NewInDetails />,
-  },
-  {
-    id: 1,
-    path: "//:bluorng_id",
-    element: <BluorngDetails />,
   },
 ];

@@ -10,7 +10,7 @@ const Ourstore = () => {
   }, []);
   return (
     <>
-      <div className="flex gap-2 px-[3%] p-5 bg-gray-200">
+      <div className="flex gap-2 px-[3%] p-5 bg-gray-200 max-lg:pt-36">
         <div className="w-[33%]">
           <video autoPlay controls={false} muted loop>
             <source src="https://cdn.shopify.com/videos/c/o/v/cd5529a970f5492fb7c37efb012e98d5.mp4" />

@@ -1,21 +1,28 @@
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import classNames from "classnames";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Faq = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+      left: 0,
+    });
+  });
   const [page, setPage] = useState("DELIVERY");
   return (
     <>
-      <div className="bg-gray-200 px-[5rem]">
+      <div className="bg-gray-200 lg:px-[5rem] max-lg:pt-24">
         <div className="flex justify-center pt-10">
           <p>FAQ'S</p>
         </div>
-        <div className="grid grid-cols-6 px-[1rem] ">
+        <div className=" flex justify-center gap-5 max-lg:overflow-y-scroll max-lg:pl-[16rem]">
           <div>
             <button
               onClick={() => setPage("PRODUCT")}
               className={classNames(
-                " h-fit  w-44 p-3 items-center",
+                " lg:h-fit max-lg:h-12  lg:w-44 w-20  lg:p-3   items-center max-lg:text-xs",
                 page === "PRODUCT"
                   ? "bg-gray-200 border border-black p-2"
                   : "bg-black text-white"
@@ -23,8 +30,77 @@ const Faq = () => {
             >
               PRODUCT
             </button>
+          </div>
+          <div>
+            <button
+              onClick={() => setPage("DELIVERY")}
+              className={classNames(
+                "lg:h-fit max-lg:h-12 lg:w-44 w-20 lg:p-3  items-center max-lg:text-xs",
+                page === "DELIVERY"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
+              )}
+            >
+              DELIVERY
+            </button>
+          </div>
+          <div>
+            <button
+              className={classNames(
+                " lg:h-fit max-lg:h-12  lg:w-44 w-20 lg:p-3  items-center max-lg:text-xs",
+                page === "ORDER"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
+              )}
+              onClick={() => setPage("ORDER")}
+            >
+              ORDER
+            </button>
+          </div>
+          <div>
+            <button
+              className={classNames(
+                " lg:h-fit max-lg:h-12 lg:w-44 w-20 lg:p-3  items-center max-lg:text-xs",
+                page === "ORDER RECEIVED"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
+              )}
+              onClick={() => setPage("ORDER RECEIVED")}
+            >
+              ORDER RECEIVED
+            </button>
+          </div>
+          <div>
+            <button
+              className={classNames(
+                " lg:h-fit max-lg:h-12 lg:w-44 w-20 lg:p-3 items-center max-lg:text-xs",
+                page === "EXCHANGES"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white "
+              )}
+              onClick={() => setPage("EXCHANGES")}
+            >
+              EXCHANGES
+            </button>
+          </div>
+          <div>
+            <button
+              className={classNames(
+                " lg:h-fit max-lg:h-12  lg:w-44 w-20 lg:p-3  items-center max-lg:text-xs",
+                page === "GENERAL FAQS"
+                  ? "bg-gray-200 border border-black p-2"
+                  : "bg-black text-white"
+              )}
+              onClick={() => setPage("GENERAL FAQS")}
+            >
+              GENERAL FAQS
+            </button>
+          </div>
+        </div>
+        <div className="grid grid-cols-6 lg:px-[5rem] max-lg:px-10">
+          <div>
             {page === "PRODUCT" && (
-              <div className="pt-10  w-[80rem]">
+              <div className="pt-10  lg:w-[80rem] max-lg:w-[20rem]">
                 {" "}
                 <Accordion>
                   <AccordionSummary>
@@ -85,7 +161,7 @@ const Faq = () => {
               </div>
             )}
             {page === "DELIVERY" && (
-              <div className="pt-10 w-[80rem]">
+              <div className="pt-10 lg:w-[80rem] max-lg:w-[20rem]">
                 {" "}
                 <Accordion>
                   <AccordionSummary>
@@ -242,7 +318,7 @@ const Faq = () => {
               </div>
             )}
             {page === "ORDER" && (
-              <div className="pt-10  w-[80rem]">
+              <div className="pt-10  lg:w-[80rem] max-lg:w-[20rem]">
                 <Accordion>
                   <AccordionSummary>
                     <p>HOW DO I CONFIRM MY ORDER STATUS?</p>
@@ -384,7 +460,7 @@ const Faq = () => {
               </div>
             )}
             {page === "ORDER RECEIVED" && (
-              <div className="pt-10 w-[80rem]">
+              <div className="pt-10 lg:w-[80rem] max-lg:w-[20rem]">
                 <Accordion>
                   <AccordionSummary>
                     <p>
@@ -418,7 +494,7 @@ const Faq = () => {
               </div>
             )}
             {page === "EXCHANGES" && (
-              <div className="pt-10 w-[80rem]">
+              <div className="pt-10 lg:w-[80rem] max-lg:w-[20rem]">
                 <Accordion>
                   <AccordionSummary>
                     <p>CAN I EXCHANGE AN ITEM?</p>
@@ -504,7 +580,7 @@ const Faq = () => {
               </div>
             )}
             {page === "GENERAL FAQS" && (
-              <div className="pt-10 w-[80rem]">
+              <div className="pt-10 lg:w-[80rem] max-lg:w-[20rem]">
                 <Accordion>
                   <AccordionSummary>
                     <p>CAN I GET A GST RECEIPT FOR MY ORDER?</p>
@@ -614,72 +690,6 @@ const Faq = () => {
                 </Accordion>
               </div>
             )}
-          </div>
-
-          <div>
-            <button
-              onClick={() => setPage("DELIVERY")}
-              className={classNames(
-                "h-fit w-44 p-3 items-center",
-                page === "DELIVERY"
-                  ? "bg-gray-200 border border-black p-2"
-                  : "bg-black text-white"
-              )}
-            >
-              DELIVERY
-            </button>
-          </div>
-          <div>
-            <button
-              className={classNames(
-                " h-fit  w-44 p-3 items-center",
-                page === "ORDER"
-                  ? "bg-gray-200 border border-black p-2"
-                  : "bg-black text-white"
-              )}
-              onClick={() => setPage("ORDER")}
-            >
-              ORDER
-            </button>
-          </div>
-          <div>
-            <button
-              className={classNames(
-                " h-fit w-44 p-3 items-center",
-                page === "ORDER RECEIVED"
-                  ? "bg-gray-200 border border-black p-2"
-                  : "bg-black text-white"
-              )}
-              onClick={() => setPage("ORDER RECEIVED")}
-            >
-              ORDER RECEIVED
-            </button>
-          </div>
-          <div>
-            <button
-              className={classNames(
-                " h-fit  w-44 p-3 items-center",
-                page === "EXCHANGES"
-                  ? "bg-gray-200 border border-black p-2"
-                  : "bg-black text-white "
-              )}
-              onClick={() => setPage("EXCHANGES")}
-            >
-              EXCHANGES
-            </button>
-          </div>
-          <div>
-            <button
-              className={classNames(
-                " h-fit  w-44 p-3 items-center",
-                page === "GENERAL FAQS"
-                  ? "bg-gray-200 border border-black p-2"
-                  : "bg-black text-white"
-              )}
-              onClick={() => setPage("GENERAL FAQS")}
-            >
-              GENERAL FAQS
-            </button>
           </div>
         </div>
       </div>

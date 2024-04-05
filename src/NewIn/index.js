@@ -229,7 +229,7 @@ const New = () => {
           <div>24 PRODUCTS</div>
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-2 ">
+      <div className="grid lg:grid-cols-4 grid-cols-2 gap-2 ">
         {imagearray.map((i, index) => (
           <div>
             <div

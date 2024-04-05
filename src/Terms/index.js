@@ -10,11 +10,11 @@ const Terms = () => {
   }, []);
   return (
     <>
-      <div className="flex flex-col px-[5rem] bg-gray-200 pb-10 text-xs">
-        <p className="flex justify-center pt-10 text-gray-500 font-bold">
+      <div className="flex flex-col lg:px-[5rem] max-lg:px-[1rem] bg-gray-200 pb-10 text-xs">
+        <p className="flex justify-center lg:pt-10 max-lg:pt-[10rem] text-gray-500 font-bold">
           PRIVACY POLICY
         </p>
-        <div className="text-xs pt-20">
+        <div className="text-xs lg:pt-20 pt-10">
           <p className="pt-1">
             THIS PRIVACY POLICY DESCRIBES HOW BLUORNG.COM (THE “SITE”) COLLECTS,
             USES, AND DISCLOSES YOUR PERSONAL INFORMATION WHEN YOU VISIT OR MAKE

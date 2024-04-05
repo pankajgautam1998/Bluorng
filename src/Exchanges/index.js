@@ -11,10 +11,10 @@ const Exchanges = () => {
   return (
     <>
       <div className="bg-gray-200 ">
-        <div className="flex justify-center pt-10">
+        <div className="flex justify-center lg:pt-10 max-lg:pt-[10rem]">
           <p>REFUND POLICY</p>
         </div>
-        <div className="px-[3rem] text-xs">
+        <div className="lg:px-[3rem] max-lg:px-[1rem] text-xs">
           <div>
             <p className="font-bold">CANCELLATION AND REFUND</p>
             <p className="pt-1">

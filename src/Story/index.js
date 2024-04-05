@@ -10,9 +10,11 @@ const Story = () => {
   }, []);
   return (
     <>
-      <div className="flex flex-col px-[5rem] bg-gray-200">
-        <p className="flex justify-center pt-10 text-gray-500">ABOUT US</p>
-        <div className="text-xs pt-20">
+      <div className="flex flex-col lg:px-[5rem] max-lg:px-[1rem] bg-gray-200">
+        <p className="flex justify-center lg:pt-10 max-lg:pt-[10rem] text-gray-500">
+          ABOUT US
+        </p>
+        <div className="text-xs lg:pt-20 max-lg:pt-10 ">
           <p>
             BLUORNG, PRONOUNCED AS "BLUE~ORANGE," TRANSCENDS THE CONVENTIONAL
             BOUNDARIES OF FASHION, EMBODYING A HAUTE COUTURE ETHOS THAT CAPTURES

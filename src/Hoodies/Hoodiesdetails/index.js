@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import BasicTabs from "../../Same";
+import SweatShirts from "../../SweatShirts";
 
 const HoodiesDetails = () => {
   // const [page, setPage] = useState("DESCRIPTION");
@@ -62,7 +63,7 @@ const HoodiesDetails = () => {
   console.log(open);
   return (
     <>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 max-lg:hidden">
         <div className="mt-96">
           <div className="flex justify-between px-8">
             <p>OLIVE RIPSTOP CARGOS</p>
@@ -215,6 +216,145 @@ const HoodiesDetails = () => {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="pt-[9rem] lg:hidden">
+        {data.map((i, index) => (
+          <div
+            key={index}
+            className="flex max-lg:overflow-y-scroll lg:hidden relative"
+          >
+            <img src={i.image1} alt="" />
+            <img src={i.image2} alt="" />
+            <img src={i.image3} alt="" />
+            <img src={i.image4} alt="" />
+            <img src={i.image5} alt="" />
+            <img src={i.image6} alt="" />
+            <img src={i.image7} alt="" />
+            <img src={i.image8} alt="" />
+          </div>
+        ))}
+        <div className="absolute top-52 pl-4  ">
+          {open && (
+            <div className="h-30 bg-white text-black fixed">
+              <div className="flex flex-col items-center mb-2">
+                <p>SIZE CHART</p>
+                <table className="">
+                  <tbody>
+                    <tr>
+                      <th className="border border-gray-400 ">WAIST</th>
+                      <th className="border  border-gray-400 ">LENGTH</th>
+                      <th className="border  border-gray-400 ">
+                        BOTTOM
+                        <br />
+                        WIDTH
+                      </th>
+                      <th className="border  border-gray-400 ">ROUND</th>
+                      <th className="border  border-gray-400 ">THIGH</th>
+                      <th className="border  border-gray-400 ">
+                        SHORTS
+                        <br />
+                        LENGTH
+                      </th>
+                    </tr>
+                    <tr className="border  border-gray-400">
+                      <td className="border  border-gray-400 ">28"</td>
+                      <td className="border  border-gray-400 ">44"</td>
+                      <td className="border  border-gray-400 ">24"</td>
+                      <td className="border  border-gray-400 ">25.5"</td>
+                      <td className="border  border-gray-400 ">22"</td>
+                      <td className="border  border-gray-400 ">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 ">
+                      <td className="border  border-gray-400 ">30"</td>
+                      <td className="border  border-gray-400 ">44"</td>
+                      <td className="border  border-gray-400 ">24"</td>
+                      <td className="border  border-gray-400 ">27"</td>
+                      <td className="border  border-gray-400 ">22"</td>
+                      <td className="border  border-gray-400 ">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 ">
+                      <td className="border  border-gray-400 ">32"</td>
+                      <td className="border  border-gray-400 ">44"</td>
+                      <td className="border  border-gray-400 ">24"</td>
+                      <td className="border  border-gray-400 ">28"</td>
+                      <td className="border  border-gray-400 ">24"</td>
+                      <td className="border  border-gray-400 ">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 ">
+                      <td className="border  border-gray-400 ">34"</td>
+                      <td className="border  border-gray-400 ">44"</td>
+                      <td className="border  border-gray-400 ">24"</td>
+                      <td className="border  border-gray-400 ">28.5"</td>
+                      <td className="border  border-gray-400 ">26"</td>
+                      <td className="border  border-gray-400 ">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 ">
+                      <td className="border  border-gray-400 ">36"</td>
+                      <td className="border  border-gray-400 ">44"</td>
+                      <td className="border  border-gray-400 ">24"</td>
+                      <td className="border  border-gray-400 ">29.5"</td>
+                      <td className="border  border-gray-400 ">26"</td>
+                      <td className="border  border-gray-400  ">21.5"</td>
+                    </tr>
+                    <tr className="border  border-gray-400 ">
+                      <td className="border  border-gray-400 ">38"</td>
+                      <td className="border  border-gray-400 ">44"</td>
+                      <td className="border  border-gray-400 ">24"</td>
+                      <td className="border  border-gray-400 ">31"</td>
+                      <td className="border  border-gray-400 ">22"</td>
+                      <td className="border  border-gray-400 ">21.5"</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="flex justify-between">
+          <div className="p-1">
+            <p>OLIVE RIPSTOP CARGOS</p>
+            <p>RS. 14,995</p>
+          </div>
+
+          <div className="px-2 p-1">
+            <button
+              className="bg-black text-white h-fit w-24 rounded-md p-1"
+              onClick={() => setOpen(!open)}
+            >
+              SIZE CHART
+            </button>
+          </div>
+        </div>
+        <div className="px-2 pt-1">
+          <div className="grid grid-cols-5 w-fit  gap-2 pt-5 ">
+            {array.map((i) => (
+              <div className="border h-fit rounded-md  p-2 w-16 hover:border-black text-gray-400 font-mono text-center">
+                {i.name}
+                <s>{i.discount}</s>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="px-2 pt-1">
+          <button className=" h-fit bg-gray-500 text-white rounded-md p-2 w-full">
+            BUY NOW
+          </button>
+        </div>
+        <div className="px-2 pt-1">
+          <button className=" bg-gray-200 border border-black h-fit rounded-md p-2 w-full ">
+            ADD TO CART
+          </button>
+        </div>
+        <div className=" mx-2  mt-1 rounded-md border border-black p-2">
+          <BasicTabs />
+        </div>
+        <div className="px-2 flex justify-between ">
+          <p>YOU MAY ALSO LIKE</p>
+          <p className="bg-white text-black">DISCOVER MORE</p>
+        </div>
+        <div>
+          <SweatShirts />
         </div>
       </div>
     </>
